@@ -43,7 +43,6 @@ function Technologies({
                       alt={technology.name}
                       className="h-14 w-14 object-contain"
                     />
-
                     <span className="h-fit rounded-full bg-[#CFFAFE] px-3 py-1 text-xs text-[#0284C7]">
                       {technology.badge}
                     </span>
