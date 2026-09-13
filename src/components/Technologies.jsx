@@ -11,7 +11,7 @@ function Technologies({
   onRemoveAll,
 }) {
   if (loading) {
-    return <h2 className="py-20 text-center">Loading...</h2>;
+    return <h2 className="pb-20 text-center">Loading...</h2>;
   }
 
   return (
@@ -19,7 +19,7 @@ function Technologies({
         <Container>
       <div className="">
         <h2 className="mb-2 text-[36px] font-extrabold">
-          Explore  <span className="text-[#B753CC] font-int">Technologies</span>
+          Explore  <span className="bg-gradient-to-r from-[#EC4899] via-[#B753CC] to-[#8B5CF6] bg-clip-text   text-transparent font-int">Technologies</span>
         </h2>
         <p className="mb-8 text-gray-500 font-normal text-[16px]">
           Discover the technologies and build your perfect development stack.
@@ -31,11 +31,10 @@ function Technologies({
               const isAdded = selectedStack.some(
                 (item) => item.id === technology.id
               );
-
               return (
                 <div
                   key={technology.id}
-                  className="rounded-2xl bg-white p-5 shadow"
+                  className={`rounded-2xl bg-white p-5 shadow ${isAdded ? "border-1 border-red-400": ""}`}
                 >
                   <div className="mb-4 flex justify-between">
                     <img
@@ -65,13 +64,12 @@ function Technologies({
                     <span className="text-[12px]">{technology.rating}</span>
                   </div>
                   </div>
-                 
                   <button
                     onClick={() => onAdd(technology)}
                     disabled={isAdded}
                     className={`w-full rounded-xl py-3 font-medium text-[12px] cursor-pointer ${
                       isAdded
-                        ? "bg-gray-200 text-gray-500"
+                        ? "bg-gray-200 text-red-400 border-1 border-red-300"
                         : "bg-black text-white"
                     }`}
                   >
