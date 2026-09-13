@@ -15,13 +15,13 @@ function Technologies({
   }
 
   return (
-    <section className="bg-gray-50 px-4 py-16">
+    <section className=" px-4 py-16 font-main">
         <Container>
       <div className="">
-        <h2 className="mb-2 text-[40px] font-bold">
-          Explore  <span className="text-[#B753CC]">Technologies</span>
+        <h2 className="mb-2 text-[36px] font-extrabold">
+          Explore  <span className="text-[#B753CC] font-int">Technologies</span>
         </h2>
-        <p className="mb-8 text-gray-500">
+        <p className="mb-8 text-gray-500 font-normal text-[16px]">
           Discover the technologies and build your perfect development stack.
         </p>
         <div className="grid gap-6 lg:grid-cols-3">
@@ -44,32 +44,33 @@ function Technologies({
                       className="h-14 w-14 object-contain"
                     />
 
-                    <span className="h-fit rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-600">
+                    <span className="h-fit rounded-full bg-[#CFFAFE] px-3 py-1 text-xs text-[#0284C7]">
                       {technology.badge}
                     </span>
                   </div>
                   <h3 className="text-xl font-bold">
                     {technology.name}
                   </h3>
-                  <p className="my-3 text-sm text-gray-500">
+                  <p className="my-3 h-17 text-[12px] text-[#64748B]">
                     {technology.description}
                   </p>
-                  <div className="mb-3 flex gap-2">
+                  <div className="mb-3 flex items-center gap-2">
                     <span className="rounded-full bg-gray-100 px-3 py-1 text-xs">
                       {technology.category}
                     </span>
-                    <span className="rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-600">
+                    <span className="text-[11px] font-medium text-[#64748B]">
                       {technology.difficulty}
                     </span>
-                  </div>
-                  <div className="mb-4 flex items-center gap-2">
+                     <div className="flex  gap-2">
                     <FaStar className="text-yellow-400" />
-                    <span>{technology.rating}</span>
+                    <span className="text-[12px]">{technology.rating}</span>
                   </div>
+                  </div>
+                 
                   <button
                     onClick={() => onAdd(technology)}
                     disabled={isAdded}
-                    className={`w-full rounded-xl py-3 font-semibold cursor-pointer ${
+                    className={`w-full rounded-xl py-3 font-medium text-[12px] cursor-pointer ${
                       isAdded
                         ? "bg-gray-200 text-gray-500"
                         : "bg-black text-white"

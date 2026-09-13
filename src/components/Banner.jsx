@@ -3,11 +3,11 @@ import Container from './Container'
 import Bannerr from "../assets/banner-stack.png"
 const Banner = () => {
   return (
-    <div className='pt-[142px] pb-[152px]'>
+    <div className='pt-[142px] pb-[152px] font-main'>
         <Container>
            <div className="flex items-center">
              <div className="w-2/3">
-                <h1 className='text-[60px] font-extrabold leading-none pb-5'>Build Your Ideal
+                <h1 className='text-[60px] font-extrabold leading-none pb-5 font-int'>Build Your Ideal
                   Development Stack </h1>
                   <p className='text-[18px] font-normal pb-10 pr-25'>Explore frontend, backend, database, and tooling options,
                      compare them side by side, and put together the stack that fits your

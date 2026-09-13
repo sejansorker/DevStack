@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
+import Footer from "./components/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -63,6 +64,7 @@ function App() {
         onRemove={handleRemove}
         onRemoveAll={handleRemoveAll}
       />
+      <Footer/>
     </>
   );
 }
